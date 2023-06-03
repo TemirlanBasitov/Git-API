@@ -28,13 +28,12 @@ public class GitHubApiController {
             String response = rest.getForObject(path, String.class);
             ArrayList<Repository> list = mapper.readValue(response, new TypeReference<ArrayList<Repository>>() {});
             list.forEach( repository -> {
-                ObjectMapper m = new ObjectMapper();
-                RestTemplate r = new RestTemplate();
+
                 List<Branch> branches = new ArrayList<>();
                 String branchesPath = String.format("https://api.github.com/repos/%s/%s/branches", repository.getOwner().getLogin(), repository.getName());
-                String branchesResponse = r.getForObject(branchesPath,String.class );
+                String branchesResponse = rest.getForObject(branchesPath,String.class );
                 try {
-                    branches = m.readValue(branchesResponse, new TypeReference<ArrayList<Branch>>() {});
+                    branches = mapper.readValue(branchesResponse, new TypeReference<ArrayList<Branch>>() {});
                     repository.setBranches(branches);
                 } catch (JsonProcessingException e) {
                     throw new RuntimeException(e);
