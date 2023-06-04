@@ -28,6 +28,7 @@ And here is result:
   Two repos with array of branches:
   ![Снимок экрана (7)](https://github.com/TemirlanBasitov/Git-API/assets/57500808/9a4ad645-1660-4f53-b0e0-927c5c77b04f)
   
+ ***
 ## 5. Error handling
 Applcation checks correctness of Header and accepts only application/json type. Below  you can see incorrect input and error messages.
 for incorrect username it respond with 404 error, for incorrect media type it shows 406 error with message
@@ -40,4 +41,18 @@ Error example 2:
 Pay attention for the Header
 
 ![Снимок экрана (9)](https://github.com/TemirlanBasitov/Git-API/assets/57500808/6cfe893d-dd0f-450c-942b-7a1dfa6e84f1)
+***
+## 6. Query examples
+1. http://localhost:8080/api/repositories/nyu
 
+2. http://localhost:8080/api/repositories/TemirlanBasitov
+
+3. http://localhost:8080/api/repositories/knadh
+
+4. http://localhost:8080/api/repositories/Lissy93
+
+5. http://localhost:8080/api/repositories/sebastienros
+
+***
+
+                                            Temirlan Basitov 2023
