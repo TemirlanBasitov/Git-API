@@ -19,8 +19,25 @@ Below on the schema you can see  method and endpoint with exampels.
 -{username} is github user login;
 Example: 
 http://localhost:8080/api/repositories/nyu , on the Header insert Key: 'Accept', Value: 'application/json'
+
 **nyu** is user who has 3 repos with several branches, and only 2 of them are non forked, so we need to see 2 repos in array
   ![Снимок экрана (6)](https://github.com/TemirlanBasitov/Git-API/assets/57500808/b1c12d0a-374e-4f59-848f-9b9ef5808853)
+  
+  
 And here is result:
   Two repos with array of branches:
   ![Снимок экрана (7)](https://github.com/TemirlanBasitov/Git-API/assets/57500808/9a4ad645-1660-4f53-b0e0-927c5c77b04f)
+  
+## 5. Error handling
+Applcation checks correctness of Header and accepts only application/json type. Below  you can see incorrect input and error messages.
+for incorrect username it respond with 404 error, for incorrect media type it shows 406 error with message
+Error example 1:
+Pay attention for the username 
+
+![Снимок экрана (8)](https://github.com/TemirlanBasitov/Git-API/assets/57500808/bcaa50ff-c033-4e7e-a461-1d571e0c5f58)
+
+Error example 2: 
+Pay attention for the Header
+
+![Снимок экрана (9)](https://github.com/TemirlanBasitov/Git-API/assets/57500808/6cfe893d-dd0f-450c-942b-7a1dfa6e84f1)
+
