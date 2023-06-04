@@ -19,7 +19,7 @@ Below on the schema you can see  method and endpoint with exampels.
 -{username} is github user login;
 Example: 
 http://localhost:8080/api/repositories/nyu , on the Header insert Key: 'Accept', Value: 'application/json'
-<nyu> is user who has 3 repos with several branches, and only 2 of them are non forked, so we need to see 2 repos in array
+**nyu** is user who has 3 repos with several branches, and only 2 of them are non forked, so we need to see 2 repos in array
   ![Снимок экрана (6)](https://github.com/TemirlanBasitov/Git-API/assets/57500808/b1c12d0a-374e-4f59-848f-9b9ef5808853)
 And here is result:
   Two repos with array of branches:
